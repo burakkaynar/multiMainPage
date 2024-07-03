@@ -34,7 +34,7 @@ body{
     padding: 15px;
     border-radius: 15px;
 }
-#content-div{
+#personel-content{
     padding: 20px;
 }
 #personel-info{
@@ -52,4 +52,7 @@ input{
     position: absolute;
     bottom: 0;
     right: 0;
+}
+.d-none{
+    display: none;
 }
