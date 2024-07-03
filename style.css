@@ -21,3 +21,35 @@
     --alabaster: hsl(231, 100%, 99%);
     --white: hsl(0, 0%, 100%);
 }
+body{
+    height: 100vh;
+    background: var(--pastel-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#multi-main{
+    display: flex;
+    background: var(--white);
+    padding: 15px;
+    border-radius: 15px;
+}
+#content-div{
+    padding: 20px;
+}
+#personel-info{
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    position: relative;
+}
+input{
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--light-gray);
+}
+#personel-info button{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
