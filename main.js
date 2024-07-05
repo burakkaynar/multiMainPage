@@ -10,6 +10,12 @@ const planContent = document.querySelector("#plan-content")
 const addOnBtn = document.querySelector("#addOn-btn")
 const addOnBack = document.querySelector("#addOn-back")
 const addOnsContent = document.querySelector("#addOns-content")
+/* FINISH */
+const finishContent = document.querySelector("#finish-content")
+const finishBack = document.querySelector("#finish-back")
+const finishBtn = document.querySelector("#finish-btn")
+/* SUMMARY */
+const summary = document.querySelector("#summary")
 
 personelForm.addEventListener("submit", (event) => {
     event.preventDefault()
@@ -17,16 +23,14 @@ personelForm.addEventListener("submit", (event) => {
     planContent.classList.remove("d-none")
 })
 
-
-
 nextPage(planBtn, planContent, addOnsContent)
-nextPage(addOnBtn, addOnsContent, null)
-
+nextPage(addOnBtn, addOnsContent, finishContent)
+nextPage(finishBtn, finishContent, summary)
 
 previousPage(planBack, planContent, personelContent)
 previousPage(addOnBack, addOnsContent, planContent)
+previousPage(finishBack, finishContent, addOnsContent)
 
-/* MAIN */
 function nextPage(btn, firstContent, secondContent){
     btn.addEventListener("click", () => {
         firstContent.classList.add("d-none")
