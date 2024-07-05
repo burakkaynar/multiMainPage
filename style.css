@@ -29,6 +29,7 @@ body{
     align-items: center;
 }
 #multi-main{
+    width: 900px;
     display: flex;
     background: var(--white);
     padding: 15px;
