@@ -57,3 +57,49 @@ input{
 .d-none{
     display: none;
 }
+#svg-div{
+    position: relative;
+}
+#numerators .num{
+    display: flex;
+    left: 30px;
+}
+.num h4{
+    padding: 8px 13px;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    color: var(--white);
+    margin-right: 15px;
+}
+.num-cont h5{
+    font-size: 16px;
+}
+.num-cont p{
+    color: var(--cool-gray);
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+.num-cont{
+    color: var(--white);
+}
+#num1{
+    position: absolute;
+    top: 40px;
+    
+}
+#num2{
+    position: absolute;
+    top: 100px;
+}
+#num3{
+    position: absolute;
+    top: 160px;
+}
+#num4{
+    position: absolute;
+    top: 220px;
+}
+#num1 h4{
+    background: var(--pastel-blue);
+    color: black;
+}
