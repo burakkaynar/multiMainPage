@@ -32,35 +32,124 @@ body{
     justify-content: center;
     align-items: center;
 }
+/* main */
+.d-none{
+    display: none;
+}
 #multi-main{
-    width: 900px;
+    width: 960px;
     display: flex;
     background: var(--white);
     padding: 15px;
     border-radius: 15px;
 }
-#personel-content{
-    padding: 20px;
+.content{
+    width: 100%;
+    padding: 40px 100px;
+    position: relative;
 }
+.content h1{
+    color: var(--marine-blue);
+    margin-bottom: 10px;
+}
+.content p{
+    color: var(--cool-gray);
+    margin-bottom: 40px;
+}
+.nextBtn{
+    position: absolute;
+    bottom: 40px;
+    right: 100px;
+    background: var(--marine-blue);
+    color: var(--white);
+    padding: 15px 25px;
+    border-radius: 10px;
+    border: none;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+}
+.back-Btn{
+    color: var(--cool-gray);
+    font-size: 16px;
+    font-weight: 500;
+    background: none;
+    border: none;
+    position: absolute;
+    left: 100px;
+    bottom: 40px;
+    padding: 15px 0;
+    cursor: pointer;
+}
+.back-Btn:hover{
+    color: var(--marine-blue);
+}
+#finish-btn{
+    padding: 15px 31.5px;
+}
+
+
+/*personel info */
 #personel-info{
     display: flex;
     flex-direction: column;
-    height: 80%;
-    position: relative;
+}
+#personel-info label{
+    margin-bottom: 10px;
 }
 input{
-    padding: 10px;
+    padding: 15px;
     border-radius: 10px;
+    border: none;
+    outline: 1px solid var(--light-gray);
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: var(--marine-blue);
+    font-weight: 500;
+}
+input:focus{
+    outline: 1px solid var(--purplish-blue);
+}
+
+
+
+/* plan */
+#cards{
+    display: flex;
+    width: 100%;
+    gap: 15px;
+}
+.card{
     border: 1px solid var(--light-gray);
+    border-radius: 10px;
+    padding: 20px 15px;
+    width: 100%;
 }
-#personel-info button{
-    position: absolute;
-    bottom: 0;
-    right: 0;
+.card svg{
+    margin-bottom: 40px;
 }
-.d-none{
-    display: none;
+.card p{
+    margin-top: 5px;
+    margin-bottom: 0;
 }
+#checkYearly input{
+    margin-bottom: 0;
+    margin-right: 10px;
+}
+#checkYearly{
+    width: 100%;
+    padding: 15px;
+    margin-top: 30px;
+    background: var(--alabaster);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-weight: 500;
+    color: var(--marine-blue);
+}
+
+/* main svg css */
 #svg-div{
     position: relative;
 }
@@ -69,7 +158,7 @@ input{
     left: 30px;
 }
 .num h4{
-    padding: 8px 13px;
+    padding: 9px 14px;
     border: 1px solid var(--white);
     border-radius: 50%;
     color: var(--white);
@@ -89,7 +178,6 @@ input{
 #num1{
     position: absolute;
     top: 40px;
-    
 }
 #num2{
     position: absolute;
