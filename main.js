@@ -32,7 +32,6 @@ personelForm.addEventListener("submit", (event) => {
 
     num2h4Element.style.color = "var(--black)"
     num2h4Element.style.backgroundColor = "var(--pastel-blue)"
-    
 })
 
 nextPage(planBtn, planContent, addOnsContent, num2h4Element, num3h4Element)
