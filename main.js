@@ -21,6 +21,10 @@ const num1h4Element = document.querySelector("#num1 h4")
 const num2h4Element = document.querySelector("#num2 h4")
 const num3h4Element = document.querySelector("#num3 h4")
 const num4h4Element = document.querySelector("#num4 h4")
+/* get information */ 
+const cardsElement = document.querySelectorAll(".card")
+let planName = document.querySelector("#plan-name h4")
+let priceElement = document.querySelector("#price h3")
 
 personelForm.addEventListener("submit", (event) => {
     event.preventDefault()
@@ -67,3 +71,22 @@ function previousPage(btn, firstContent, secondContent, numElement, numElement2)
         numElement2.style.backgroundColor = "var(--svg-color)"
     })
 }
+
+cardsElement.forEach(card => {
+    card.addEventListener("click", (event) => {
+        card.style.backgroundColor = "var(--magnolia)"
+        card.style.border = "1px solid var(--purplish-blue)"
+
+        planName.innerHTML = card.querySelector("h3").innerHTML
+        priceElement.innerHTML = card.querySelector("p").innerHTML
+    })
+})
+
+document.body.addEventListener("click", (event) => {
+    cardsElement.forEach(card => {
+        if(event.target != card){
+            card.style.backgroundColor = "var(--white)"
+            card.style.border = "1px solid var(--light-gray)"
+        }
+    })
+})
