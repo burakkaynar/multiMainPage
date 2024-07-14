@@ -209,6 +209,11 @@ input:focus{
     margin-bottom: 0;
 }
 
+.extrasInfo{
+    display: flex;
+    justify-content: space-between;
+}
+
 /* main svg css */
 #svg-div{
     position: relative;
