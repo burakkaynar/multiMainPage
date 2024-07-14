@@ -25,6 +25,31 @@ const num4h4Element = document.querySelector("#num4 h4")
 const cardsElement = document.querySelectorAll(".card")
 let planName = document.querySelector("#plan-name h4")
 let priceElement = document.querySelector("#price h3")
+/* addons checkbox */
+const extras = document.querySelectorAll(".extra")
+const finishAppendExtras = document.querySelector("#extrasAppend")
+
+extras.forEach(extra => {
+    const checkbox = extra.querySelector("input")
+    const extraName = extra.querySelector("h3").innerHTML
+    const extraPrice = extra.querySelector(".extraPrice").innerHTML
+
+    let newDivExtra = document.createElement("div")
+    newDivExtra.classList.add("extrasInfo")
+    newDivExtra.innerHTML = `
+    <p>${extraName}</p>
+    <h5>${extraPrice}</h5>
+    `
+    checkbox.addEventListener("change", (event) => {
+        console.log(event.target.checked)
+        if(event.target.checked){
+            finishAppendExtras.append(newDivExtra)
+        }
+        else{
+            newDivExtra.remove()
+        }
+    })
+})
 
 personelForm.addEventListener("submit", (event) => {
     event.preventDefault()
