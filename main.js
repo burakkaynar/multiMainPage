@@ -77,7 +77,7 @@ addOnBtn.addEventListener("click", () => {
     })
     console.log(toplam)
     const totalPriceElement = document.querySelector("#total-price h3")
-    totalPriceElement.innerHTML = `${toplam}/mo`
+    totalPriceElement.innerHTML = `$${toplam}/mo`
 })
 
 personelForm.addEventListener("submit", (event) => {
