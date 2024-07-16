@@ -184,13 +184,44 @@ input:focus{
 }
 
 
-
 /*finish*/
+#finish-main{
+    padding: 15px;
+    border-radius: 10px;
+    background-color: var(--light-gray);
+}
 #main-price{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 20px;
 }
-
+#main-price p{
+    margin-bottom: 0;
+}
+#price h4{
+    margin-top: 10px;
+}
+#plan-name p{
+    text-decoration: underline;
+    margin-top: 5px;
+}
+#plan-name p:hover{
+    color: var(--purplish-blue);
+    cursor: pointer;
+}
+#extrasAppend p, #extrasAppend h5{
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+#total-price{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+#total-price p{
+    margin-bottom: 0;
+    margin-top: 5px;
+}
 
 /* summary */
 #summary div{
