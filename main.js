@@ -30,6 +30,72 @@ let priceh3Element = document.querySelector("total-price h3")
 /* addons checkbox */
 const extras = document.querySelectorAll(".extra")
 const finishAppendExtras = document.querySelector("#extrasAppend")
+/* yearly */
+const yearCheck = document.querySelector("#checkYearly input")
+
+
+yearCheck.addEventListener("change", (event) => {
+    cardsElement.forEach(card => {
+        const newPElement = document.createElement("p")
+        newPElement.classList.add("cardp")
+        
+        if(event.target.checked){
+            newPElement.innerHTML = "2 months free"
+            card.append(newPElement)
+        }
+        else{
+            const cardP = document.querySelector(".cardp")
+            cardP.remove()
+        }
+    })
+
+    const cardArcadeP = document.querySelector("#card-arcade p")
+    const cardAdvancedP = document.querySelector("#card-advanced p")
+    const cardProP  = document.querySelector("#card-pro p")
+    const extraOnline = document.querySelector("#extra1 .extraPrice")
+    const extraStorage = document.querySelector("#extra2 .extraPrice")
+    const extraCustom = document.querySelector("#extra3 .extraPrice")
+    
+
+    if(event.target.checked){
+        cardArcadeP.innerHTML = "$90/yr"
+        cardArcadeP.setAttribute("value", 90)
+
+        cardAdvancedP.innerHTML = "$120/yr"
+        cardAdvancedP.setAttribute("value", 120)
+
+        cardProP.innerHTML = "$150/yr"
+        cardProP.setAttribute("value", 150)
+
+        extraOnline.innerHTML = "$10/yr"
+        extraOnline.setAttribute("value", 10)
+
+        extraStorage.innerHTML = "$20/yr"
+        extraStorage.setAttribute("value", 20)
+
+        extraCustom.innerHTML = "$20/yr"
+        extraCustom.setAttribute("value", 20)
+    }
+    else{
+        cardArcadeP.innerHTML = "$9/mo"
+        cardArcadeP.setAttribute("value", 9)
+
+        cardAdvancedP.innerHTML = "$12/mo"
+        cardAdvancedP.setAttribute("value", 12)
+
+        cardProP.innerHTML = "$15/mo"
+        cardProP.setAttribute("value", 15)
+
+        extraOnline.innerHTML = "$1/mo"
+        extraOnline.setAttribute("value", 1)
+
+        extraStorage.innerHTML = "$2/mo"
+        extraStorage.setAttribute("value", 2)
+
+        extraCustom.innerHTML = "$2/mo"
+        extraCustom.setAttribute("value", 2)
+    }
+})
 
 cardsElement.forEach(card => {
     card.addEventListener("click", () => {
@@ -127,9 +193,6 @@ function previousPage(btn, firstContent, secondContent, numElement, numElement2)
         numElement2.style.backgroundColor = "var(--svg-color)"
     })
 }
-
-
-
 document.body.addEventListener("click", (event) => {
     cardsElement.forEach(card => {
         if(event.target != card){
